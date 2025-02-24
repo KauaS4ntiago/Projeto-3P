@@ -1,6 +1,7 @@
 package Serviços;
 
 import Entidades.produto;
+import Repositorios.estoqueRepositorio;
 
 public class servicosProduto {
 

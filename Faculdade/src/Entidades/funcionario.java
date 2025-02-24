@@ -2,7 +2,7 @@ package Entidades;
 
 import Interfaces.Ilogin;
 
-public class funcionario extends pessoa implements Ilogin {
+public class funcionario extends pessoa {
 
 	private String funcao;
 	private double salario;
@@ -12,9 +12,9 @@ public class funcionario extends pessoa implements Ilogin {
 
 	}
 
-	public funcionario(String funcao, double salario, String nome, int idade, String cpf, int cargaSemanal, char sexo,
-			String senha) {
-		super(nome, idade, cpf, sexo, senha);
+	public funcionario(String funcao, double salario, String nome, String email, int idade, String cpf,
+			int cargaSemanal, char sexo, String senha) {
+		super(nome, email, idade, cpf, sexo, senha);
 		this.funcao = funcao;
 		this.salario = salario;
 		this.cargaSemanal = cargaSemanal;
@@ -43,19 +43,5 @@ public class funcionario extends pessoa implements Ilogin {
 	public void setCargaSemanal(int cargaSemanal) {
 		this.cargaSemanal = cargaSemanal;
 	}
-
-	public void login(String tentativa) {
-		if (getSenha().equals(tentativa)) {
-			System.out.println("Acesso permitido!");
-		} else {
-			System.out.println("Login inválido!Tente novamente.");
-		}
-
-	}
-
-	public void cadastro(String novaSenha) {
-			System.out.println("Cadastro feito com sucesso!");
-			setSenha(novaSenha);
-		}
 
 }

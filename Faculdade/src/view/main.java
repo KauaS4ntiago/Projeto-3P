@@ -22,7 +22,7 @@ public class main {
 			int n = sc.nextInt();
 			switch (n) {
 			case (1):
-
+				
 				break;
 			case (2):
 
@@ -31,7 +31,7 @@ public class main {
 				System.out.println("Digite seu");
 				break;
 			case (4):
-				System.out.println("Encerrando o programa...;");
+				System.out.println("Encerrando o programa...");
 				sc.close();
 				return;
 			default:

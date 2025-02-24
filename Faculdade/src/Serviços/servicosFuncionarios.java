@@ -1,6 +1,7 @@
 package Serviços;
 
 import Entidades.funcionario;
+import Repositorios.funcionarioRepositorio;
 
 public class servicosFuncionarios {
 

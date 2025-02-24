@@ -2,6 +2,7 @@ package Entidades;
 
 public abstract class pessoa {
 	private String nome;
+	private String email;
 	private int idade;
 	private String cpf;
 	private char sexo;
@@ -11,8 +12,9 @@ public abstract class pessoa {
 
 	}
 
-	public pessoa(String nome, int idade, String cpf, char sexo, String senha) {
+	public pessoa(String nome, String email, int idade, String cpf, char sexo, String senha) {
 		this.nome = nome;
+		this.email = email;
 		this.idade = idade;
 		this.cpf = cpf;
 		this.sexo = sexo;
@@ -57,6 +59,14 @@ public abstract class pessoa {
 
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }
