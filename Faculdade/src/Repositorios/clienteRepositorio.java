@@ -15,13 +15,4 @@ public class clienteRepositorio {
 	public ArrayList<cliente> listar() {
 		return clientes;
 	}
-
-	public cliente identificar(String cpf) {
-		for (cliente c : clientes) {
-			if (c.getCpf() == cpf) {
-				return c;
-			}
-		}
-		return null;
-	}
 }

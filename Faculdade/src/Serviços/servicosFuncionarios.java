@@ -5,19 +5,6 @@ import Repositorios.funcionarioRepositorio;
 
 public class servicosFuncionarios {
 
-	public void aumentarSalario(double aumentoSalario) {
+	private funcionarioRepositorio reporsitory;
 
-	}
-
-	public void diminuirSalario(double reducaoSalario) {
-
-	}
-
-	public void aumentarCargaSemanal(double aumentoCarga) {
-
-	}
-
-	public void diminuirCargaSemanal(double reducaoCarga) {
-
-	}
 }

@@ -4,17 +4,15 @@ public class estoque {
 
 	private int qnt;
 	private String ID;
-	private boolean disponivel;
 
 	public estoque() {
 
 	}
 
-	public estoque(int qnt, String iD, boolean disponivel) {
+	public estoque(int qnt, String iD) {
 
 		this.qnt = qnt;
 		ID = iD;
-		this.disponivel = false;
 	}
 
 	public int getQnt() {
@@ -31,14 +29,6 @@ public class estoque {
 
 	public void setID(String iD) {
 		ID = iD;
-	}
-
-	public boolean isDisponivel() {
-		return disponivel;
-	}
-
-	public void setDisponivel(boolean disponivel) {
-		this.disponivel = disponivel;
 	}
 
 }

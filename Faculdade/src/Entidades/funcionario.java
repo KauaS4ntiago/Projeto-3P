@@ -1,7 +1,5 @@
 package Entidades;
 
-import Interfaces.Ilogin;
-
 public class funcionario extends pessoa {
 
 	private String funcao;
@@ -13,8 +11,8 @@ public class funcionario extends pessoa {
 	}
 
 	public funcionario(String funcao, double salario, String nome, String email, int idade, String cpf,
-			int cargaSemanal, char sexo, String senha) {
-		super(nome, email, idade, cpf, sexo, senha);
+			int cargaSemanal, char sexo, String senha, int ID) {
+		super(nome, email, idade, cpf, sexo, senha, ID);
 		this.funcao = funcao;
 		this.salario = salario;
 		this.cargaSemanal = cargaSemanal;

@@ -10,8 +10,8 @@ public class produto extends estoque {
 
 	}
 
-	public produto(String nome, String marca, double preco, int qnt, String iD, boolean disponivel) {
-		super(qnt, iD, disponivel);
+	public produto(String nome, String marca, double preco, int qnt, String iD) {
+		super(qnt, iD);
 		this.nome = nome;
 		this.marca = marca;
 		this.preco = preco;
