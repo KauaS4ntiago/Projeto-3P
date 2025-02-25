@@ -6,7 +6,7 @@ import Repositorios.produtoRepositorio;
 public class servicosProduto {
 
 	private produtoRepositorio repository;
-
+	//falta modificar
 	public void adicionarProduto() {
 
 	}
