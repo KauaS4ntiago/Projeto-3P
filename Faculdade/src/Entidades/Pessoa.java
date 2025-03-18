@@ -1,6 +1,6 @@
 package Entidades;
 
-public abstract class pessoa {
+public abstract class Pessoa {
 	private int ID;
 	private String nome;
 	private String email;
@@ -9,11 +9,11 @@ public abstract class pessoa {
 	private char sexo;
 	private String senha;
 
-	public pessoa() {
+	public Pessoa() {
 
 	}
 
-	public pessoa(String nome, String email, int idade, String cpf, char sexo, String senha,int ID) {
+	public Pessoa(String nome, String email, int idade, String cpf, char sexo, String senha,int ID) {
 		this.nome = nome;
 		this.email = email;
 		this.idade = idade;

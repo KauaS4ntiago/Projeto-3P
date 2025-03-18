@@ -1,11 +1,11 @@
 package Serviços;
 
-import Entidades.produto;
-import Repositorios.produtoRepositorio;
+import Entidades.Produto;
+import Repositorios.ProdutoRepositorio;
 
-public class servicosProduto {
+public class ServicosProduto {
 
-	private produtoRepositorio repository;
+	private ProdutoRepositorio repository;
 	//falta modificar
 	public void adicionarProduto() {
 

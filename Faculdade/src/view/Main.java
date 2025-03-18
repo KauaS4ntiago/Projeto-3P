@@ -2,12 +2,12 @@ package view;
 
 import java.util.Scanner;
 import java.util.ArrayList;
-import Entidades.produto;
-import Entidades.cliente;
-import Entidades.funcionario;
-import Entidades.estoque;
+import Entidades.Produto;
+import Entidades.Cliente;
+import Entidades.Funcionario;
+import Entidades.Estoque;
 
-public class main {
+public class Main {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

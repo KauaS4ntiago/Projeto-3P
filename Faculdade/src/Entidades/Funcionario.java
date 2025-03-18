@@ -1,16 +1,16 @@
 package Entidades;
 
-public class funcionario extends pessoa {
+public class Funcionario extends Pessoa {
 
 	private String funcao;
 	private double salario;
 	private int cargaSemanal;
 
-	public funcionario() {
+	public Funcionario() {
 
 	}
 
-	public funcionario(String funcao, double salario, String nome, String email, int idade, String cpf,
+	public Funcionario(String funcao, double salario, String nome, String email, int idade, String cpf,
 			int cargaSemanal, char sexo, String senha, int ID) {
 		super(nome, email, idade, cpf, sexo, senha, ID);
 		this.funcao = funcao;

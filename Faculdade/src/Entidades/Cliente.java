@@ -1,21 +1,21 @@
 package Entidades;
 
-public class cliente extends pessoa {
+public class Cliente extends Pessoa {
 
 	private boolean membro;
 	private boolean ativo;
 
-	public cliente() {
+	public Cliente() {
 
 	}
 
-	public cliente(String nome, String email, int idade, String cpf, char sexo, boolean membro, String senha, int ID) {
+	public Cliente(String nome, String email, int idade, String cpf, char sexo, boolean membro, String senha, int ID) {
 		super(nome, email, idade, cpf, sexo, senha, ID);
 		this.membro = membro;
 		ativo = true;
 	}
 
-	public boolean getMembro() {
+	public boolean isMembro() {
 		return membro;
 	}
 
@@ -23,7 +23,7 @@ public class cliente extends pessoa {
 		this.membro = membro;
 	}
 
-	public boolean getAtivo() {
+	public boolean isAtivo() {
 		return ativo;
 	}
 

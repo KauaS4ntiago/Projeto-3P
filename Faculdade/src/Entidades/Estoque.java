@@ -1,15 +1,15 @@
 package Entidades;
 
-public class estoque {
+public class Estoque {
 
 	private int qnt;
 	private String ID;
 
-	public estoque() {
+	public Estoque() {
 
 	}
 
-	public estoque(int qnt, String iD) {
+	public Estoque(int qnt, String iD) {
 
 		this.qnt = qnt;
 		ID = iD;

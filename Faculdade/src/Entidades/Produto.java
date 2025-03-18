@@ -1,16 +1,16 @@
 package Entidades;
 
-public class produto extends estoque {
+public class Produto extends Estoque {
 
 	private String nome;
 	private String marca;
 	private double preco;
 
-	public produto() {
+	public Produto() {
 
 	}
 
-	public produto(String nome, String marca, double preco, int qnt, String iD) {
+	public Produto(String nome, String marca, double preco, int qnt, String iD) {
 		super(qnt, iD);
 		this.nome = nome;
 		this.marca = marca;
