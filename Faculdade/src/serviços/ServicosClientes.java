@@ -1,8 +1,8 @@
-package Serviços;
+package serviços;
 
-import Entidades.Cliente;
-import Repositorios.ClienteRepositorio;
-import Interfaces.Ilogin;
+import entidades.Cliente;
+import interfaces.Ilogin;
+import repositorios.ClienteRepositorio;
 
 public class ServicosClientes implements Ilogin {
 
@@ -13,7 +13,7 @@ public class ServicosClientes implements Ilogin {
 	}
 
 	public boolean autenticar(String email, String senha) {
-		for (Cliente c : repository.listar()) {
+		for (Cliente c : repository.listarClientes()) {
 			if (c.getEmail().equals(email) && c.getSenha().equals(senha)) {
 				System.out.println("Login efetuado com sucesso!");
 				return true;
@@ -24,7 +24,7 @@ public class ServicosClientes implements Ilogin {
 	}
 
 	public void tornarMembro(int ID) {
-		for (Cliente c : repository.listar()) {
+		for (Cliente c : repository.listarClientes()) {
 			if (ID == c.getID()) {
 				c.setMembro(true);
 				System.out.println("Membro adicionado com sucesso!");
@@ -36,7 +36,7 @@ public class ServicosClientes implements Ilogin {
 	}
 
 	public void retirarMembro(int ID) {
-		for (Cliente c : repository.listar()) {
+		for (Cliente c : repository.listarClientes()) {
 			if (ID == c.getID()) {
 				if (c.isMembro() == true) {
 					c.setMembro(false);

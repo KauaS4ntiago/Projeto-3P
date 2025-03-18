@@ -1,4 +1,4 @@
-package Entidades;
+package entidades;
 
 public abstract class Pessoa {
 	private int ID;

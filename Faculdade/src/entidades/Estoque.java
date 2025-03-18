@@ -1,18 +1,18 @@
-package Entidades;
+package entidades;
 
 public class Estoque {
 
 	private int qnt;
-	private String ID;
+	private int ID;
 
 	public Estoque() {
 
 	}
 
-	public Estoque(int qnt, String iD) {
+	public Estoque(int qnt, int ID) {
 
 		this.qnt = qnt;
-		ID = iD;
+		ID = ID;
 	}
 
 	public int getQnt() {
@@ -23,12 +23,12 @@ public class Estoque {
 		this.qnt = qnt;
 	}
 
-	public String getID() {
+	public int getID() {
 		return ID;
 	}
 
-	public void setID(String iD) {
-		ID = iD;
+	public void setID(int ID) {
+		this.ID = ID;
 	}
 
 }

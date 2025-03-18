@@ -1,15 +1,15 @@
-package Serviços;
+package serviços;
 
-import Entidades.Funcionario;
-import Repositorios.FuncionarioRepositorio;
-import Interfaces.Ilogin;
+import entidades.Funcionario;
+import interfaces.Ilogin;
+import repositorios.FuncionarioRepositorio;
 
 public class ServicosFuncionarios implements Ilogin {
 
 	private FuncionarioRepositorio repository;
 
 	public boolean autenticar(String email, String senha) {
-		for (Funcionario f : repository.listar()) {
+		for (Funcionario f : repository.listarFuncionarios()) {
 			if (f.getEmail().equals(email) && f.getSenha().equals(senha)) {
 				System.out.println("Login efetuado com sucesso!");
 				return true;

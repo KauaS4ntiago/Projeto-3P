@@ -1,7 +1,8 @@
-package Repositorios;
+package repositorios;
 
-import Entidades.Cliente;
 import java.util.ArrayList;
+
+import entidades.Cliente;
 
 public class ClienteRepositorio {
 
@@ -26,7 +27,7 @@ public class ClienteRepositorio {
 		}
 	}
 
-	public ArrayList<Cliente> listar() {
+	public ArrayList<Cliente> listarClientes() {
 		return clientes;
 	}
 

@@ -1,4 +1,4 @@
-package Entidades;
+package entidades;
 
 public class Produto extends Estoque {
 
@@ -10,8 +10,8 @@ public class Produto extends Estoque {
 
 	}
 
-	public Produto(String nome, String marca, double preco, int qnt, String iD) {
-		super(qnt, iD);
+	public Produto(String nome, String marca, double preco, int qnt, int ID) {
+		super(qnt, ID);
 		this.nome = nome;
 		this.marca = marca;
 		this.preco = preco;

@@ -1,7 +1,8 @@
-package Repositorios;
+package repositorios;
 
-import Entidades.Funcionario;
 import java.util.ArrayList;
+import entidades.Cliente;
+import entidades.Funcionario;
 
 public class FuncionarioRepositorio {
 
@@ -27,7 +28,7 @@ public class FuncionarioRepositorio {
 		}
 	}
 
-	public ArrayList<Funcionario> listar() {
+	public ArrayList<Funcionario> listarFuncionarios() {
 		return funcionarios;
 	}
 
