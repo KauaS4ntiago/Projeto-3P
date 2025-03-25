@@ -1,7 +1,6 @@
 package repositorios;
 
 import java.util.ArrayList;
-import entidades.Cliente;
 import entidades.Funcionario;
 
 public class FuncionarioRepositorio {
@@ -18,18 +17,33 @@ public class FuncionarioRepositorio {
 		for (Funcionario f : funcionarios) {
 			if (f.getID() == ID) {
 				// tornar funcionário cliente não membro
-				System.out.println("Funcionário Demitido");
 				encontrado = true;
+				System.out.println("Funcionário Demitido");
 				break;
 			}
-			if (!encontrado) {
-				System.out.println("Funcionário não encontrado.");
-			}
+		}
+		if (!encontrado) {
+			System.out.println("Funcionário não encontrado!");
 		}
 	}
 
 	public ArrayList<Funcionario> listarFuncionarios() {
 		return funcionarios;
+	}
+
+	// falta modificar
+	public void alterarFuncionario(int ID) {
+		boolean encontrado = false;
+		for (Funcionario f : funcionarios) {
+			if (f.getID() == ID) {
+				encontrado = true;
+				break;
+
+			}
+		}
+		if (!encontrado) {
+			System.out.println("Funcionário não encontrado!");
+		}
 	}
 
 }

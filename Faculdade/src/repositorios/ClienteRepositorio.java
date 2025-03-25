@@ -21,14 +21,28 @@ public class ClienteRepositorio {
 				encontrado = true;
 				break;
 			}
-			if (!encontrado) {
-				System.out.println("Cliente não encontrado.");
-			}
+		}
+		if (!encontrado) {
+			System.out.println("Cliente não encontrado!");
 		}
 	}
 
 	public ArrayList<Cliente> listarClientes() {
 		return clientes;
+	}
+
+//falta modificar
+	public void alterarCliente(int ID, String NovoNome) {
+		boolean encontrado = false;
+		for (Cliente c : clientes) {
+			if (ID == c.getID()) {
+				encontrado = true;
+				break;
+			}
+		}
+		if (!encontrado) {
+			System.out.println("Cliente não encontrado!");
+		}
 	}
 
 }
