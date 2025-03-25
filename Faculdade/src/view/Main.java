@@ -1,13 +1,11 @@
 package view;
 
 import java.util.Scanner;
-
-import entidades.Cliente;
-import entidades.Estoque;
-import entidades.Funcionario;
-import entidades.Produto;
-
 import java.util.ArrayList;
+import serviços.ServicosClientes;
+import serviços.ServicosFuncionarios;
+import serviços.ServicosPedido;
+import serviços.ServicosProduto;
 
 public class Main {
 
@@ -27,7 +25,6 @@ public class Main {
 			int n = sc.nextInt();
 			switch (n) {
 			case (1):
-
 				/*
 				 * 1 passo(colocar um mecanismo de pesquisar os produtos) / 2 passo(listar todos
 				 * os produtos com info) 3 passo(fechamento do pedido) / 4 passo(emitir nota

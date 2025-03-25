@@ -8,12 +8,12 @@ public class ProdutoRepositorio {
 
 	private ArrayList<Produto> produtos = new ArrayList<>();
 
-	public void adicionarProduto(Produto produto) {
+	public void adicionarEstoque(Produto produto) {
 		produtos.add(produto);
 		System.out.println("Produto salvo com sucesso!");
 	}
 
-	public Produto removerProduto(int ID) {
+	public Produto removerEstoque(int ID) {
 		boolean encontrado = false;
 		for (Produto p : produtos) {
 			if (p.getID() == ID) {

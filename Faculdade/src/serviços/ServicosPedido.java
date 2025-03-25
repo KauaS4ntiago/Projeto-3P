@@ -9,17 +9,52 @@ public class ServicosPedido {
 	private ArrayList<Produto> carrinho = new ArrayList<>();
 	private ProdutoRepositorio repository;
 
-	// falta criar os métodos
+	// falta melhorar os métodos
 
-	public void adicionarProduto() {
-
+	public void adicionarProduto(String nome) {
+		boolean encontrado = false;
+		for (Produto p : repository.listarProdutos()) {
+			if (p.equals(nome)) {
+				encontrado = true;
+				carrinho.add(p);
+				System.out.println("Produto adicionado ao carrinho!");
+			}
+		}
+		if (!encontrado) {
+			System.out.println("Produto não encontrado ou fora de estoque!");
+		}
 	}
 
-	public void removerProduto() {
-
+	public void removerProduto(String nome) {
+		boolean encontrado = false;
+		for (Produto p : repository.listarProdutos()) {
+			if (p.equals(nome)) {
+				encontrado = true;
+				carrinho.remove(p);
+				System.out.println("Produto removido do carrinho!");
+			}
+		}
+		if (!encontrado) {
+			System.out.println("Produto não encontrado ou fora de estoque!");
+		}
 	}
 
-	public void fecharPedido() {
+	public void esvaziarCarrinho() {
+		carrinho.clear();
+	}
+	
+//falta modificar 
+	public double fecharPedido() {
+		if (carrinho.size() != 0) {
+			for (Produto p : carrinho) {
+				return fecharPedido() + p.getPreco();
+			}
+		}
+		double aux = fecharPedido();
+		return aux;
+	}
+
+	public void gerarNotaFiscal() {
 
 	}
 
