@@ -11,6 +11,10 @@ public class ServicosPedido {
 
 	// falta melhorar os métodos
 
+	public ServicosPedido(ProdutoRepositorio repository) {
+		this.repository = repository;
+	}
+
 	public void adicionarProduto(String nome) {
 		boolean encontrado = false;
 		for (Produto p : repository.listarProdutos()) {
@@ -42,7 +46,7 @@ public class ServicosPedido {
 	public void esvaziarCarrinho() {
 		carrinho.clear();
 	}
-	
+
 //falta modificar 
 	public double fecharPedido() {
 		if (carrinho.size() != 0) {

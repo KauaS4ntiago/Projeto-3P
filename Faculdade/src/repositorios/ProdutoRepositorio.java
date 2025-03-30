@@ -8,12 +8,45 @@ public class ProdutoRepositorio {
 
 	private ArrayList<Produto> produtos = new ArrayList<>();
 
-	public void adicionarEstoque(Produto produto) {
+	// CREATE(C)
+	public void adicionarProduto(Produto produto) {
 		produtos.add(produto);
 		System.out.println("Produto salvo com sucesso!");
 	}
 
-	public Produto removerEstoque(int ID) {
+	// READ(R)
+	public ArrayList<Produto> listarProdutos() {
+		return produtos;
+	}
+
+	// UPDATE(U)
+	public boolean alterarValor(int ID, String valor, Object novoValor) {
+		for (Produto p : produtos) {
+			if (p.getID() == ID) {
+				switch (valor.toLowerCase()) {
+				case "nome":
+					p.setNome((String) novoValor);
+					break;
+				case "marca":
+					p.setMarca((String) novoValor);
+					break;
+				case "preço":
+					p.setPreco((double) novoValor);
+					break;
+				default:
+					System.out.println("Valor inválido!");
+					break;
+				}
+			}
+			System.out.println("Produto atualizado com sucesso!");
+			return true;
+		}
+		System.out.println("Produto não encontrado.");
+		return false;
+	}
+
+	// DELETE(D)
+	public Produto removerProduto(int ID) {
 		for (Produto p : produtos) {
 			if (p.getID() == ID) {
 				produtos.remove(p);
@@ -25,53 +58,11 @@ public class ProdutoRepositorio {
 
 	}
 
-	public ArrayList<Produto> listarProdutos() {
-		return produtos;
+	public boolean empty() {
+		return produtos.isEmpty();
 	}
 
-//alterar atributos
-	public void alterarNome(int ID, String novoNome) {
-		boolean encontrado = false;
-		for (Produto p : produtos) {
-			if (p.getID() == ID) {
-				p.setNome(novoNome);
-				encontrado = true;
-				break;
-			}
-		}
-		if (!encontrado) {
-			System.out.println("Produto não encontrado!");
-		}
-
-	}
-
-	public void alterarMarca(int ID, String novaMarca) {
-		boolean encontrado = false;
-		for (Produto p : produtos) {
-			if (p.getID() == ID) {
-				p.setMarca(novaMarca);
-				encontrado = true;
-				break;
-			}
-		}
-		if (!encontrado) {
-			System.out.println("Produto não encontrado!");
-		}
-
-	}
-
-	public void alterarPreco(int ID, double novoPreco) {
-		boolean encontrado = false;
-		for (Produto p : produtos) {
-			if (p.getID() == ID) {
-				p.setPreco(novoPreco);
-				encontrado = true;
-				break;
-			}
-		}
-		if (!encontrado) {
-			System.out.println("Produto não encontrado!");
-		}
-
+	public int size() {
+		return produtos.size();
 	}
 }

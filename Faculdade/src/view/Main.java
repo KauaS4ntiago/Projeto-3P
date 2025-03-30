@@ -6,11 +6,24 @@ import serviços.ServicosClientes;
 import serviços.ServicosFuncionarios;
 import serviços.ServicosPedido;
 import serviços.ServicosProduto;
+import repositorios.ClienteRepositorio;
+import repositorios.FuncionarioRepositorio;
+import repositorios.ProdutoRepositorio;
 
 public class Main {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+
+		ClienteRepositorio clienterepositorio = new ClienteRepositorio();
+		FuncionarioRepositorio funcionariorepositorio = new FuncionarioRepositorio();
+		ProdutoRepositorio produtorepositorio = new ProdutoRepositorio();
+
+		ServicosClientes servicoscliente = new ServicosClientes(clienterepositorio);
+		ServicosFuncionarios servicosfuncionarios = new ServicosFuncionarios(funcionariorepositorio);
+		ServicosProduto servicosProduto = new ServicosProduto(produtorepositorio);
+		ServicosPedido servicosPedido = new ServicosPedido(produtorepositorio);
+		servicosProduto.adicionarProduto("Coca cola", "coca", 0.50, 100, 69);
 		while (true) {
 
 			System.out.println("Bem Vindo!");
@@ -25,6 +38,9 @@ public class Main {
 			int n = sc.nextInt();
 			switch (n) {
 			case (1):
+				ServicosProduto.listarProdutos();
+				System.out.println("Digite qual produto você deseja buscar:");
+
 				/*
 				 * 1 passo(colocar um mecanismo de pesquisar os produtos) / 2 passo(listar todos
 				 * os produtos com info) 3 passo(fechamento do pedido) / 4 passo(emitir nota
