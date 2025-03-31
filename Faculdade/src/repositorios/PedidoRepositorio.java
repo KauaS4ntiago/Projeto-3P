@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import entidades.Produto;
 
 public class PedidoRepositorio {
-
+//Fila
 	private ArrayList<Produto> pedidos = new ArrayList<>();
 
 	// CREATE (C)
@@ -19,8 +19,16 @@ public class PedidoRepositorio {
 	}
 
 	// UPDATE (U) 
-	public boolean atualizarProdutoNoPedido(int ID, String valor, Object novoValor) {
-	
+	public boolean substituirProdutoNoPedido(int ID, Produto novoProduto) {
+	    for (int i = 0; i < pedidos.size(); i++) {
+	        if (pedidos.get(i).getID() == ID) {
+	            pedidos.set(i, novoProduto);
+	            System.out.println("Produto substituído com sucesso!");
+	            return true;
+	        }
+	    }
+	    System.out.println("Produto no pedido não encontrado.");
+	    return false;
 	}
 
 	// DELETE (D)

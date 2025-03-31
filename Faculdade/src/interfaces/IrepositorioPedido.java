@@ -10,7 +10,7 @@ public interface IrepositorioPedido {
 
 	public ArrayList<Produto> listarProdutosNoPedido();
 
-	public boolean atualizarProdutoNoPedido(int ID, Produto novoProduto);
+	public boolean substituirProdutoNoPedido(int ID, Produto novoProduto);
 
 	public Produto removerProdutoDoPedido();
 

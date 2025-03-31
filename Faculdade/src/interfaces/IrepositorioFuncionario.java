@@ -10,7 +10,7 @@ public interface IrepositorioFuncionario {
 
 	public ArrayList<Funcionario> listarFuncionarios();
 
-	public boolean alterarValor(int ID);
+	public boolean atualizarFuncionario(int ID, String valor, Object novoValor);
 
 	public void demitirFuncionario(int ID);
 }

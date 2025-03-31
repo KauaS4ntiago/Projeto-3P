@@ -20,12 +20,35 @@ public class FuncionarioRepositorio implements IrepositorioFuncionario {
 	}
 
 	// UPDATE (U)
-	public boolean alterarValor(int ID) {
+	public boolean atualizarFuncionario(int ID, String valor, Object novoValor) {
 		for (Funcionario f : funcionarios) {
 			if (f.getID() == ID) {
-				break;
+				switch (valor.toLowerCase()) {
+				case "nome":
+					f.setNome((String) novoValor);
+					break;
+				case "email":
+					f.setEmail((String) novoValor);
+					break;
+				case "idade":
+					f.setIdade((int) novoValor);
+					break;
+				case "salario":
+					f.setSalario((double) novoValor);
+					break;
+				case "funcao":
+					f.setFuncao((String) novoValor);
+					break;
+				default:
+					System.out.println("Campo inválido!");
+					return false;
+				}
+				System.out.println("Funcionário atualizado com sucesso!");
+				return true;
 			}
 		}
+		System.out.println("Funcionário não encontrado.");
+		return false;
 	}
 
 	// DELETE (D)
@@ -41,6 +64,14 @@ public class FuncionarioRepositorio implements IrepositorioFuncionario {
 		if (!encontrado) {
 			System.out.println("Funcionário não encontrado!");
 		}
+	}
+	
+	public boolean empty() {
+		return funcionarios.isEmpty();
+	}
+
+	public int size() {
+		return funcionarios.size();
 	}
 
 }
