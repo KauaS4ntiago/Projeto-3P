@@ -1,10 +1,10 @@
 package repositorios;
 
 import java.util.ArrayList;
-
+import interfaces.IrepositorioProduto;
 import entidades.Produto;
 
-public class ProdutoRepositorio {
+public class ProdutoRepositorio implements IrepositorioProduto{
 
 	private ArrayList<Produto> produtos = new ArrayList<>();
 

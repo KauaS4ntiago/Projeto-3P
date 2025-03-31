@@ -2,8 +2,9 @@ package repositorios;
 
 import java.util.ArrayList;
 import entidades.Funcionario;
+import interfaces.IrepositorioFuncionario;
 
-public class FuncionarioRepositorio {
+public class FuncionarioRepositorio implements IrepositorioFuncionario {
 
 	private ArrayList<Funcionario> funcionarios = new ArrayList<>();
 
@@ -19,7 +20,7 @@ public class FuncionarioRepositorio {
 	}
 
 	// UPDATE (U)
-	public void alterarFuncionario(int ID) {
+	public boolean alterarValor(int ID) {
 		for (Funcionario f : funcionarios) {
 			if (f.getID() == ID) {
 				break;
@@ -32,7 +33,6 @@ public class FuncionarioRepositorio {
 		boolean encontrado = false;
 		for (Funcionario f : funcionarios) {
 			if (f.getID() == ID) {
-				// tornar funcionário cliente não membro
 				encontrado = true;
 				System.out.println("Funcionário Demitido");
 				break;
